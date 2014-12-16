@@ -4,6 +4,8 @@ function Integer(spec) {
 
 	/* Super call */
 	var thisObject = Object(spec);
+
+	/* Load constructor arguments */
 	var value = spec.value;
 	if(typeof value !== 'number' || Math.floor(value)!==value) {
 		throw Error('Value argument should be an integer');

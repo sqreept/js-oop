@@ -1,12 +1,15 @@
 /* Static property */
 var cnt = 0;
 
-/* Class definition (Constructor) */
+/* Constructor definition */
 function Object(spec) {
+
 	/* Private vars */
 	var objectId = Math.floor(1000000 + 8999999*Math.random());
+
 	/* Virtual table */
 	var virtual = {};
+
 	/* Own methods */
 	function Object__clone() {
 		if(!virtual.hasOwnProperty('clone')) {
@@ -26,9 +29,11 @@ function Object(spec) {
 		}
 		return virtual.toString();
 	}
+
 	/* Static property access from constructor */
 	cnt++;
-	/* Instance public members */
+
+	/* Return instance public members */
 	return {
 		virtual: virtual,
 		hashCode: Object__hashCode,

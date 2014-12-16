@@ -4,6 +4,8 @@ function Real(spec) {
 
 	/* Super call */
 	var thisObject = Object(spec);
+
+	/* Load constructor arguments */
 	var value = spec.value;
 	if(typeof value !== 'number') {
 		throw Error('Value argument should be a number');
